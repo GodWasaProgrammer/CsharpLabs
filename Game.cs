@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,9 +11,12 @@ namespace CsharpLabs
     {
         List<Player> players = new List<Player>();
         
+
+
         public void Playgame()
 
         {
+
             Console.WriteLine("Dart Game");
             Console.WriteLine("This game is designed for 3 Players PC/Human");
             do
@@ -24,14 +28,22 @@ namespace CsharpLabs
 
             }while (players.Count < 3);
 
-            foreach(var index in players)
-            {
-                
-                Console.WriteLine("Current Player is:{0}", index.Name);
-                Console.WriteLine("-----------------------------------------------");
-                index.Add_turn();
-                
-            }
+            
+                foreach (var index in players)
+                {
+
+                    Console.WriteLine("Current Player is:{0}", index.Name);
+                    Console.WriteLine("-----------------------------------------------");
+                    if (index.Name == "PC")
+                    {
+                        index.Add_turn();
+                    }
+
+                    else
+                    {
+                        index.Add_turn();
+                    }
+                } 
 
             
             
@@ -43,8 +55,20 @@ namespace CsharpLabs
 
         public void AddPlayer()
         {
+            string nameInput;
 
-            players.Add(new Player(Console.ReadLine()));
+            nameInput = Console.ReadLine();
+
+            if (nameInput == null || nameInput == "")
+            {
+                nameInput = "PC";
+                players.Add(new Player(nameInput));
+            }
+            else
+            { 
+            players.Add(new Player(nameInput));
+            }
+
         }
 
     }
