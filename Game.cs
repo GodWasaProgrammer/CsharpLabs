@@ -30,23 +30,22 @@ namespace CsharpLabs
 
             
                 foreach (var index in players)
+
+                {
+                do
                 {
 
                     Console.WriteLine("Current Player is:{0}", index.Name);
                     Console.WriteLine("-----------------------------------------------");
-                    if (index.Name == "PC")
-                    {
-                        index.Add_turn();
-                    }
 
-                    else
-                    {
-                        index.Add_turn();
-                    }
+                    index.Add_turn();
+                    index.Calculatepoints();
+                } while (index.Score < 301);
+
                 } 
 
             
-            
+                
 
 
 

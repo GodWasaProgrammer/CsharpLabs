@@ -14,6 +14,28 @@ namespace CsharpLabs
         private int Toss3;
         private int RoundTotal;
         
+
+        public int toss1
+        {
+            get { return Toss1; }
+
+        }
+
+        public int toss2
+        {
+            get {return Toss2;}
+        }
+
+        public int toss3
+        {
+            get {return Toss3;}
+        }
+        public int Roundtotal
+        {
+            get { return RoundTotal; }
+        }
+        
+
         public int RoundNumber { get { return roundnumber; } set { roundnumber = value; } }
         public Turns(int toss1, int toss2, int toss3)
         {
@@ -21,20 +43,15 @@ namespace CsharpLabs
             Toss2 = toss2;
             Toss3 = toss3;
             RoundTotal = RoundTotal + toss1 + toss2 + toss3;
-            
+            roundnumber++;
 
             
         }
 
-        public void Get_Score()
+        public int Get_Score()
         {
-            Console.WriteLine("Player:");
-            Console.WriteLine("RoundNumber:{0}", RoundNumber);
 
-            Console.WriteLine("Your First Toss:{0}", Toss1);
-            Console.WriteLine("Your Second Toss:{0}", Toss2);
-            Console.WriteLine("Your Third Toss:{0}", Toss3);
-            Console.WriteLine("Your Total round score was:{0}", RoundTotal);
+            return RoundTotal;  
 
 
         }
