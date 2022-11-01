@@ -36,13 +36,20 @@ namespace CsharpLabs
         }
         
 
-        public int RoundNumber { get { return roundnumber; } set { roundnumber = value; } }
+        public int RoundNumber
+        
+        { get { return roundnumber; }
+            
+            set { roundnumber = value; } 
+        
+        }
+
         public Turns(int toss1, int toss2, int toss3)
         {
             Toss1 = toss1;
             Toss2 = toss2;
             Toss3 = toss3;
-            RoundTotal = RoundTotal + toss1 + toss2 + toss3;
+            RoundTotal = toss1 + toss2 + toss3;
             roundnumber++;
 
             

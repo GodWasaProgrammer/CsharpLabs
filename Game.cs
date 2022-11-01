@@ -42,10 +42,10 @@ namespace CsharpLabs
                     index.Calculatepoints();
                 } while (index.Score < 301);
 
-                } 
+                }
 
-            
-                
+
+            Console.ReadKey();
 
 
 

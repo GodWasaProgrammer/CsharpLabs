@@ -116,9 +116,19 @@ namespace CsharpLabs
 
                 Console.WriteLine("---------------------------------");
 
+
+
                 turns.Add(new Turns(toss1, toss2, toss3));
 
-                Console.ReadKey();
+                int roundtotal;
+
+                roundtotal = this.toss1 + this.toss2 + this.toss3;
+
+
+
+                Console.WriteLine("Round total is:{0}", roundtotal);
+
+               
 
             }
                 else
@@ -145,7 +155,7 @@ namespace CsharpLabs
 
             
 
-                Console.ReadKey();
+                
         }
 
         public void Print_Turns()
